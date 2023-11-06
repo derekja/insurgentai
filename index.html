@@ -14,70 +14,179 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;700&family=Open+Sans:wght@300;400;700&family=Red+Hat+Display:wght@300&display=swap" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;700&family=Open+Sans:wght@100;200;300;400;700&family=Red+Hat+Display:wght@300&display=swap" rel="stylesheet"> 
 <style>
   body {
-    color:rgb(240,235,225);
-    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    font-family: "Red Hat Display", "Open Sans", Arial, Helvetica, sans-serif;
+    font-weight:400;
+    color:rgb(80,80,80);
+
+  }
+  .container {
+    background:transparent;
   }
   h1 {
+    
     font-family: "Comfortaa", Arial, Helvetica, sans-serif;
     font-weight: 700;
-    font-size: calc(1.375rem + 4.5vw);
+    font-size: calc(1rem + 4.5vw);
+    margin-bottom: 1rem;
+
   } 
+  h4 {
+    font-size:1.5rem;
+    text-align: center;
+  }
   .bg-image {
-    height: 100vh;
+    color:rgb(240,235,225);
     background-repeat: no-repeat;
-    background-size:contain;
+    background-size:cover;
+    background-attachment: fixed;
+    /* resize: ; */
   }
   .splash-image {
-    background-image: url('./kid-using-laptop-with-granny.jpg');
+    background: linear-gradient(to bottom, rgba(120, 130, 140, 0.95), rgba(117, 19, 93, 0.0)),
+    url('./assets/kid-using-laptop-with-granny.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
   }
+  .splash-image>.container{
+    height:80vh;
+  }
+  .title {
+    padding: 1rem;
+  }
+  .tagline {
+    font-weight: 100;
+  }
+  .jumbotron {
+    background:rgba(240,240,240, 0.85);
+    font-size:1.1rem;
+    margin:2rem auto;
+    max-width:800px;
+    padding:1rem 2rem;
+    color:rgb(50,50,50);
+  }
+  .contact {
+    padding: 2rem;
+  }
+  .form-control, .input-group-text {
+    border-radius:0.1rem;
+  }
+
+  form {
+    margin-top:1rem;
+  }
+  .btn-primary {
+    background-color:rgba(93, 117, 86, 0.7);
+    border-color:#596e52;
+  } 
+  .btn-primary:hover,
+  .btn-primary:active,
+  .btn-primary:focus {
+    background-color:rgb(147, 174, 138);
+    border-color:rgb(93, 117, 86);
+  }
+  form .btn {
+    margin: 1rem auto;
+    display: block;
+    width:100%;
+  }
+
+  .logo {
+    max-width:65%;
+  }
+  .credits {
+    margin-top:2rem;
+  } 
+  .credits h4 {
+    text-align:center;
+  }
+
+  .credits a {
+    width: 100%;
+    display: inline-block;
+    text-align:center;
+  }
+  @media (min-width: 576px) {
+    .credits h4 {
+        text-align:right;
+    }
+    .credits .logo {
+        text-align:right;
+        max-width:60%;
+    }
+    .credits a {
+        text-align:left;
+    }
+    form .btn {
+        margin: 0;
+        max-width:100px;
+    }
+  }
+
 </style>
 </head>
 <body>
-  <div class="bg-image splash-image">
+<div class="bg-image splash-image">
     <div class="container">
-      <div class="p-5 text-center bg-body-tertiary rounded-3">
+      <div class="title text-center bg-body-tertiary rounded-3">
         <h1 class="text-body-emphasis">Grandkid.club</h1>
+        <h3 class="tagline">Using AI driven interactivity to support elder wellbeing.</h3>
       </div> 
 
     </div>
-
-<div class="page-content">
-  <div class="wrapper">
-
-
-
-      <article class="post-content">
-        <h2 id="how-to-sell">Contact Us</h2>
-
-        <form netlify name="mailing-list">
-          <div class="form-group row">
-            <label for="email" class="col-4 col-form-label">Email Address</label> 
-            <div class="col-8">
-              <div class="input-group">
-                <div class="input-group-prepend">
-                  <div class="input-group-text">
-                    <i class="fa fa-envelope"></i>
+    <div>
+        <div class="jumbotron intro">
+            <p>What if you could open an app or website and ask the avatar who appears how to change the filter on your vacuum, or why the 'm' key on your keyboard stopped working, or for help scheduling your next check-up at the doctor's?</p>
+    
+            <p>What if this avatar was able to make conversation, play games, and connect you seamlessly with real humans once your questions go beyond its capabilities, all while using natural language speech recognition? You won't have to figure out how to type 'm' with a broken 'm' key, because you can just speak and be understood.
+            </p>
+    
+            <p>Technology is moving at a breakneck clip for just about everyone, but that doesn't mean we can't make use of it to help make the lives of our parents and grandparents easier, rather than more confusing. Grandkid.club can help those of us who aren't pros at Google-Fu to stay connected and engaged. Whether your loved one needs help finding a plumber to fix a dripping faucet or a reminder to take their arthritis medications, or just someone to give them an update on the latest news or play a game while the grandkids are busy at school, Grandkid.club is there. Whether they need access to home care or a handyman, or just a young tech whiz to plug their printer back in, Grandkid.club can identify the problem they need assistance with and connect them with a real human who can help.</p>
+        </div>
+        <div class="jumbotron contact">
+            <h4>Want to learn more? Sign up to our mailing list to stay in the loop.</h4>
+            <form netlify name="mailing-list">
+                <div class="form-group row justify-content-center ">
+                  <!-- <label for="email" class="col-4">Email Address</label>  -->
+                  <div class="col-sm-6">
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <div class="input-group-text">
+                          <i class="fa fa-envelope"></i>
+                        </div>
+                      </div> 
+                      <input id="email" name="email" type="text" class="form-control" placeholder="Email address" required="required">
+                    </div>
+                  </div>
+                  <div class="col-sm-3">
+                    <button name="submit" type="submit" class="btn btn-primary">Submit</button>
                   </div>
                 </div> 
-                <input id="email" name="email" type="text" class="form-control" required="required">
-              </div>
+              </form>
+              <div class="row  justify-content-center align-items-center credits">
+                <div class="col-sm">
+                    <h4>Developed by</h4>
+                </div>                
+                <div class="col-sm">
+                    <a href="https://www.qvirt.com">
+                        <img src="./assets/QVirt_Logo.svg" alt="QVirt.com" class="footer-logo logo"/>
+                    </a>
+                </div>
+          
             </div>
-          </div> 
-          <div class="form-group row">
-            <div class="offset-4 col-8">
-              <button name="submit" type="submit" class="btn btn-primary">Submit</button>
-            </div>
-          </div>
-        </form>
+        </div>
 
-      </article>
+  
     </div>
-  </div>
 
-  <footer class="site-footer">
+    <footer class="site-footer">
+
+
+    
   </footer>
 </body>
 </html>
