@@ -137,23 +137,16 @@
         </div>
         <div class="jumbotron contact">
             <h4>Want to learn more? Sign up to our mailing list to stay in the loop.</h4>
-            <form name="mailing-list" method="POST" data-netlify="true" action="/success">
-                <div class="form-group row justify-content-center">
-                  <div class="col-sm-6">
-                    <div class="input-group">
-                      <div class="input-group-prepend">
-                        <div class="input-group-text">
-                          <i class="fa fa-envelope"></i>
-                        </div>
-                      </div>
-                      <input id="email" name="email" type="email" class="form-control" placeholder="Email address" required>
-                    </div>
-                  </div>
-                  <div class="col-sm-3">
-                    <button type="submit" class="btn btn-primary">Sign Up</button>
-                  </div>
+            <form name="mailing-list" data-netlify="true">
+              <div class="row justify-content-center">
+                <div class="col-sm-6">
+                  <input type="email" name="email" class="form-control" placeholder="Email address" required>
                 </div>
-              </form>
+                <div class="col-sm-3">
+                  <button type="submit" class="btn btn-primary">Sign Up</button>
+                </div>
+              </div>
+            </form>
               <div class="row  justify-content-center align-items-center credits">
                 <div class="col-sm">
                     <h4>Developed by InsurgentAI</h4>
