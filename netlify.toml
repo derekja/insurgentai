@@ -12,11 +12,25 @@
     Referrer-Policy = "strict-origin-when-cross-origin"
     Cache-Control = "public, max-age=31536000"
 
-[[forms]]
-  name = "mailing-list"
-  
-[[forms.notifications]]
-  to = "derekja@gmail.com"
+[build]
+  publish = "."
+
+[[headers]]
+  for = "/*"
+    [headers.values]
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains"
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    Content-Security-Policy = "default-src 'self' https: 'unsafe-inline' 'unsafe-eval'; img-src 'self' data: https:; font-src 'self' https: data:;"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Cache-Control = "public, max-age=31536000"
+
+[forms]
+  [forms.mailing-list]
+    name = "mailing-list"
+    [forms.mailing-list.notifications]
+      email = "derekja@gmail.com"
 
 [[redirects]]
   from = "/success"
