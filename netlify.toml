@@ -11,3 +11,14 @@
     X-XSS-Protection = "1; mode=block"
     Referrer-Policy = "strict-origin-when-cross-origin"
     Cache-Control = "public, max-age=31536000"
+
+[[forms]]
+  name = "mailing-list"
+  
+[[forms.notifications]]
+  to = "derekja@gmail.com"
+
+[[redirects]]
+  from = "/success"
+  to = "/success.html"
+  status = 200
