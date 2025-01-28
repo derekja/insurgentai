@@ -137,12 +137,8 @@
         </div>
         <div class="jumbotron contact">
             <h4>Want to learn more? Sign up to our mailing list to stay in the loop.</h4>
-            <form data-netlify="true" name="mailing-list" method="POST" netlify-honeypot="bot-field" action="/success">
+            <form name="mailing-list" method="POST" data-netlify="true" action="/success">
                 <div class="form-group row justify-content-center">
-                  <input type="hidden" name="form-name" value="mailing-list" />
-                  <p class="hidden">
-                    <label>Don't fill this out if you're human: <input name="bot-field" /></label>
-                  </p>
                   <div class="col-sm-6">
                     <div class="input-group">
                       <div class="input-group-prepend">
@@ -150,11 +146,11 @@
                           <i class="fa fa-envelope"></i>
                         </div>
                       </div>
-                      <input id="email" name="email" type="email" class="form-control" placeholder="Email address" required="required">
+                      <input id="email" name="email" type="email" class="form-control" placeholder="Email address" required>
                     </div>
                   </div>
                   <div class="col-sm-3">
-                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                    <button type="submit" class="btn btn-primary">Sign Up</button>
                   </div>
                 </div>
               </form>
