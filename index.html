@@ -52,7 +52,7 @@
     line-height: 1.6;
   }
   .intro h4 {
-    color: rgb(93, 117, 86);
+    color: rgb(31, 31, 31);
     margin-top: 2rem;
     margin-bottom: 1rem;
     text-align: left;
@@ -147,6 +147,16 @@
     vertical-align: middle;
   }
 
+  .corner-logo {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    width: 50px;
+    z-index: 1000;
+
+    opacity: 0.9;
+  }
+
   @media (min-width: 576px) {
     .credits h4 {
         text-align:right;
@@ -168,10 +178,11 @@
 </head>
 <body>
 <div class="bg-image splash-image">
+    <img src="assets/iai.png" alt="InsurgentAI Logo" class="corner-logo">
     <div class="container">
       <div class="title text-center bg-body-tertiary rounded-3">
         <h1 class="text-body-emphasis">InsurgentAI</h1>
-        <h3 class="tagline">We empower those who protect us with the latest in bespoke AI-powered technologies.  High speed and low drag, our asymmetry relative to peers is your tactical advantage.  We are Insurgent AI.</h3>
+        <h3 class="tagline">We empower those who protect us with the latest in bespoke AI-powered technologies.  High speed and low drag, our asymmetry relative to peers is your tactical advantage.  We are InsurgentAI.</h3>
       </div> 
     </div>
     <div>
