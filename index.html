@@ -158,13 +158,66 @@
   }
 
   /* Mobile-first styles */
-  h3 {
-    font-size: 24px;
-    margin-bottom: 0.5rem;
-  }
+  @media (max-width: 575px) {
+    h1 {
+      font-size: 42px;
+    }
+    
+    h3 {
+      font-size: 24px;
+      margin-bottom: 0.5rem;
+      line-height: 1.4;
+    }
 
-  .title {
-    padding: 0.5rem;
+    .title {
+      padding: 0.5rem;
+      margin: 0 10px;
+      background: rgba(255, 255, 255, 0.9) !important;
+    }
+
+    .splash-image > .container {
+      height: auto;
+      padding-top: 80px;
+    }
+
+    .bg-image {
+      background-attachment: scroll;
+    }
+
+    .splash-image {
+      background: linear-gradient(to bottom, rgba(120, 130, 140, 0.2), rgba(17, 17, 17, 0.9)),
+      url('./assets/hand_world_desat.png') no-repeat center center;
+      background-size: cover;
+    }
+
+    .jumbotron {
+      margin: 1rem;
+      padding: 1rem;
+    }
+
+    .corner-logo {
+      width: 40px;
+      top: 10px;
+      left: 10px;
+    }
+
+    .contact form .row {
+      margin: 0;
+    }
+
+    .contact .col-sm-6,
+    .contact .col-sm-3 {
+      padding: 0 5px;
+    }
+
+    form .btn {
+      margin: 1rem auto;
+      width: 100%;
+    }
+
+    .form-control {
+      margin-bottom: 0.5rem;
+    }
   }
 
   /* Desktop styles */
