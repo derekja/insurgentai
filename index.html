@@ -261,7 +261,8 @@
     .jumbotron h4 {
       margin-top: 1.5rem;
       margin-bottom: 1rem;
-      font-size: 22px;
+      font-size: 28px;
+      font-weight: 600;
     }
 
     .jumbotron p {
@@ -277,17 +278,25 @@
       left: 0;
       right: 0;
       background: rgb(0, 0, 0);
-      padding: 8px;
+      padding: 8px 15px;
       z-index: 1000;
       height: 50px;
       display: flex;
       align-items: center;
+      gap: 12px;
     }
 
     .logo-banner img {
       height: 34px;
       width: auto;
-      margin-left: 12px;
+    }
+
+    .logo-banner span {
+      font-family: 'Megrim', cursive;
+      color: rgb(240, 235, 225);
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
     }
 
     .splash-image > .container {
@@ -375,10 +384,11 @@
     </div>
     <div class="logo-banner">
         <img src="assets/iai.png" alt="InsurgentAI Logo" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        <span>InsurgentAI</span>
     </div>
     <div class="container">
       <div class="title text-center bg-body-tertiary rounded-3">
-        <h3 class="tagline">We empower those who protect us with the latest in bespoke AI-driven technologies. High speed and low drag, our agile and innovative teams are your tactical advantage. We are InsurgentAI.</h3>
+        <h3 class="tagline">We empower those who protect us with the latest in bespoke AI-driven technologies. High speed and low drag, our agile and innovative teams are your tactical advantage. We are <span class="company-name">InsurgentAI</span>.</h3>
       </div> 
     </div>
     <div>
