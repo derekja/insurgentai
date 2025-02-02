@@ -158,6 +158,11 @@
     width: 50px;
     z-index: 1000;
     opacity: 0.9;
+    cursor: pointer;
+  }
+
+  .logo-banner img {
+    cursor: pointer;
   }
 
   .logo-banner {
@@ -229,17 +234,17 @@
       left: 0;
       right: 0;
       background: rgb(0, 0, 0);
-      padding: 15px;
+      padding: 8px;
       z-index: 1000;
-      height: 70px;
+      height: 50px;
       display: flex;
       align-items: center;
     }
 
-    .corner-logo {
-      position: static;
-      width: 40px;
-      margin-left: 15px;
+    .logo-banner img {
+      height: 34px;
+      width: auto;
+      margin-left: 12px;
     }
 
     .splash-image > .container {
@@ -321,9 +326,9 @@
 </head>
 <body>
 <div class="bg-image splash-image">
-    <img src="assets/iai.png" alt="InsurgentAI Logo" class="corner-logo">
+    <img src="assets/iai.png" alt="InsurgentAI Logo" class="corner-logo" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
     <div class="logo-banner">
-        <img src="assets/iai.png" alt="InsurgentAI Logo">
+        <img src="assets/iai.png" alt="InsurgentAI Logo" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
     </div>
     <div class="container">
       <div class="title text-center bg-body-tertiary rounded-3">
