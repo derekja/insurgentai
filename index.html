@@ -6,7 +6,7 @@
 <title>InsurgentAI</title>
 <meta name="description" content="A splash page describing InsurgentAI">
 <!-- Favicon -->
-<link rel="icon" type="image/png" href="assets/IAI_logo.png">
+<link rel="icon" type="image/png" href="assets/iai.png">
 <!-- CSS only -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"> 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -26,7 +26,7 @@
     background: transparent;
   }
   h1 {
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Megrim', cursive;
     margin-bottom: 1rem;
     font-size: 64px;
     font-weight: 700;
@@ -47,10 +47,24 @@
   p {
     font-family: 'IBM Plex Sans', sans-serif;
     font-size: 16px;
+    text-align: left;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+  }
+  .intro h4 {
+    color: rgb(93, 117, 86);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    text-align: left;
+  }
+  .intro p:last-child {
+    margin-bottom: 0;
+  }
+  .contact p, .contact h4 {
     text-align: center;
   }
   .company-name {
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Megrim', cursive;
     font-weight: 700;
   }
   .bg-image {
@@ -60,8 +74,8 @@
     background-attachment: fixed;
   }
   .splash-image {
-    background: linear-gradient(to bottom, rgba(120, 130, 140, 0.7), rgba(117, 19, 93, 0.0)),
-    url('./assets/hand_world.png') no-repeat center center fixed; 
+    background: linear-gradient(to bottom, rgba(120, 130, 140, 0.0), rgba(17, 17, 17, 0.8)),
+    url('./assets/hand_world_desat.png') no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -157,15 +171,37 @@
     <div class="container">
       <div class="title text-center bg-body-tertiary rounded-3">
         <h1 class="text-body-emphasis">InsurgentAI</h1>
-        <h3 class="tagline">Operationalise your data</h3>
+        <h3 class="tagline">We empower those who protect us with the latest in bespoke AI-powered technologies.  High speed and low drag, our asymmetry relative to peers is your tactical advantage.  We are Insurgent AI.</h3>
       </div> 
     </div>
     <div>
         <div class="jumbotron intro">
-            <p>Lorem ipsum</p>
+            <h4>Our Purpose</h4>
+            <p><strong>We believe in breaking down the barriers to mission success.</strong></p>
+            <p>Insurgent AI is the ally of those who defend us. We know our people have the knowledge and skills to keep us safe, but legacy structures struggle to keep pace with relentless change. Organisations, units, and teams of any ilk know their mission, but too often lack the time or resource to onboard the right technology. Our answer? The data you own, transformed with the power of AI, for decision advantage. Our rally call is to deliver what works, with what you've got, for mission success. Now.</p>
+
+            <h4>Our Origins</h4>
+            <p><strong>We exist to disrupt old models of support to Defence and Intelligence.</strong></p>
+            <p>For too long, Defence has been led by monolithic providers and broken procurement. Equipment and systems ordered for the right reasons, but which fail to deliver for the practitioner on the frontline. None more so than technology - unproven, exorbitant, and late - redundant by the time it arrives. Platforms made to solve someone else's problem, not fine-tuned to your unique needs. We develop solutions that drive operational impact as you see it.</p>
+
+            <h4>Our Technology</h4>
+            <p><strong>We build AI that revolutionises your systems, not replace them.</strong></p>
+            <p>We build AI that revolutionises your systems, not replace them.
+              Our technology is engineered for impact, rapidly deploying open, scalable, solutions which seamlessly integrate with your current systems. We build on open architectures, using the latest approaches in AI including semantic graph knowledge bases to derive insight from your data and empower your users. Natural language solutions enable semantic search, fact decomposition consistency checking, and language standardisation tools. Enable your diverse workforce to form a cohesive body of actionable knowledge.</p>
+
+            <h4>Our Ethos</h4>
+            <p><strong>We formed to help our people deliver on operations, behind the desk or in the field.</strong></p>
+            <p>Born from deep expertise in AI development across sectors, we joined with Intelligence practitioners marked by operational experience. The common ground - what lies between the operator and mission success is rarely a need for expensive, exquisite systems or kit, but by being able to exploit what is currently available to you. We integrate technical expertise with practitioner insight to redirect existing systems and resources to drive effect on the ground - powered by the latest in AI innovation.</p>
+
+            <h4>Our Commitment</h4>
+            <p><strong>We form partnerships to solve the problems as defined by you.</strong></p>
+            <p>We know that to deliver today, tomorrow, and the next day, is only done through partnerships based on trust. That's why we trade in commitment, not transactions. For us, Phase 0 is decisive, embedding with your team to assess every obstacle - and opportunity - before identifying the requirement. As your needs change, we offer a partner capable of deploying new and bespoke tools to your team in time to make the start-line. By thinking long-term, we deploy only what's right for you, not what used to be right for somebody else.</p>
+
+            <h4>Our Team</h4>
+            <p>We are AI experts, leaders, and practitioners from across Allied nations. Centred in Canada, we operate globally, focussing on core partners in the UK, US, Australia, and New Zealand. We are individuals from diverse backgrounds, who have come to build a team, united by our common task - giving the advantage to those who keep us safe.</p>
         </div>
         <div class="jumbotron contact">
-            <h4>Want to learn more? Sign up to our mailing list to stay in the loop.</h4>
+            <h4>Want to learn more or contact us? Put your email here and you'll hear back from us.</h4>
             <form name="mailing-list" data-netlify="true">
                 <div class="row justify-content-center">
                     <div class="col-sm-6">
