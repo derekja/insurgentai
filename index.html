@@ -40,7 +40,7 @@
   }
   h4 {
     font-family: 'Sunflower', sans-serif;
-    font-size: 24px;
+    font-size: 32px;
     text-align: center;
     font-weight: 500;
   }
@@ -57,6 +57,16 @@
     margin-bottom: 1rem;
     text-align: left;
   }
+  .intro p strong {
+    font-size: 1.3em;
+    line-height: 1.4;
+    display: block;
+    margin-bottom: 1.2rem;
+    letter-spacing: 0.02em;
+    font-weight: 600;
+    color: rgb(250, 248, 248);
+  }
+
   .intro p:last-child {
     margin-bottom: 0;
   }
@@ -82,13 +92,17 @@
     background-size: cover;
   }
   .splash-image>.container{
-    height:80vh;
+    height: 80vh;
+    padding-top: 80px;
   }
   .title {
     padding: 1rem;
   }
   .tagline {
     font-weight: 500;
+    font-size: 42px;
+    margin-bottom: 1rem;
+    letter-spacing: 0.05em;
   }
   .jumbotron {
     background:rgba(19, 19, 19, 0.9);
@@ -151,18 +165,37 @@
     vertical-align: middle;
   }
 
-  .corner-logo {
+  .desktop-banner {
     position: fixed;
-    top: 15px;
-    left: 15px;
-    width: 50px;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgb(27, 27, 27);
+    padding: 12px 24px;
     z-index: 1000;
-    opacity: 0.9;
-    cursor: pointer;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
   }
 
-  .logo-banner img {
+  .desktop-banner img {
+    height: 40px;
+    width: auto;
     cursor: pointer;
+    transition: opacity 0.2s ease;
+  }
+
+  .desktop-banner img:hover {
+    opacity: 0.8;
+  }
+
+  .desktop-banner span {
+    font-family: 'Megrim', cursive;
+    color: rgb(240, 235, 225);
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
   }
 
   .logo-banner {
@@ -170,8 +203,12 @@
   }
 
   @media (max-width: 575px) {
-    .corner-logo {
+    .desktop-banner {
       display: none;
+    }
+
+    .logo-banner {
+      display: flex;
     }
   }
 
@@ -196,8 +233,14 @@
 
     .splash-image > .container {
       height: auto;
-      padding-top: 80px;
+      padding-top: 70px;
       padding-bottom: 20px;
+    }
+
+    .tagline {
+      font-size: 24px;
+      line-height: 1.4;
+      margin-bottom: 0.5rem;
     }
 
     .bg-image {
@@ -326,13 +369,15 @@
 </head>
 <body>
 <div class="bg-image splash-image">
-    <img src="assets/iai.png" alt="InsurgentAI Logo" class="corner-logo" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+    <div class="desktop-banner">
+        <img src="assets/iai.png" alt="InsurgentAI Logo" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        <span>InsurgentAI</span>
+    </div>
     <div class="logo-banner">
         <img src="assets/iai.png" alt="InsurgentAI Logo" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
     </div>
     <div class="container">
       <div class="title text-center bg-body-tertiary rounded-3">
-        <h1 class="text-body-emphasis">InsurgentAI</h1>
         <h3 class="tagline">We empower those who protect us with the latest in bespoke AI-driven technologies. High speed and low drag, our agile and innovative teams are your tactical advantage. We are InsurgentAI.</h3>
       </div> 
     </div>
@@ -350,8 +395,7 @@
         <div class="jumbotron intro">
             <h4>Our Technology</h4>
             <p><strong>We build AI that revolutionises your systems, not replace them.</strong></p>
-            <p>We build AI that revolutionises your systems, not replace them.
-              Our technology is engineered for impact, rapidly deploying open, scalable, solutions which seamlessly integrate with your current systems. We build on open architectures, using the latest approaches in AI including semantic graph knowledge bases to derive insight from your data and empower your users. Natural language solutions enable semantic search, fact decomposition consistency checking, and language standardisation tools. Enable your diverse workforce to form a cohesive body of actionable knowledge.</p>
+            <p>Our technology is engineered for impact, rapidly deploying open, scalable, solutions which seamlessly integrate with your current systems. We build on open architectures, using the latest approaches in AI including semantic graph knowledge bases to derive insight from your data and empower your users. Natural language solutions enable semantic search, fact decomposition consistency checking, and language standardisation tools. Enable your diverse workforce to form a cohesive body of actionable knowledge.</p>
         </div>
         <div class="jumbotron intro">
             <h4>Our Ethos</h4>
