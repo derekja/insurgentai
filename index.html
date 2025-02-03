@@ -445,6 +445,38 @@
     line-height: 1.5;
   }
 
+  /* Mobile timeline styles */
+  @media (max-width: 575px) {
+    .timeline {
+      padding: 2rem 0;
+    }
+
+    .timeline::before {
+      display: none;
+    }
+
+    .timeline-item {
+      width: 100%;
+      margin: 2rem 0;
+      padding-left: 2rem;
+    }
+
+    .timeline-dot {
+      left: -8px;
+      right: auto;
+    }
+
+    .timeline-item:nth-child(even) .timeline-dot {
+      left: -8px;
+      right: auto;
+    }
+
+    .timeline-content {
+      padding: 1.5rem;
+    }
+  }
+
+  /* Desktop timeline styles */
   @media (min-width: 576px) {
     .timeline {
       display: flex;
