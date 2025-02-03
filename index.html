@@ -549,6 +549,47 @@
         max-width:100px;
     }
   }
+
+  /* Scroll Images */
+  .scroll-images {
+    display: none;
+  }
+
+  @media (min-width: 576px) {
+    .scroll-images {
+      display: block;
+    }
+
+    .scroll-image {
+      position: fixed;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 300px;
+      height: auto;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+      z-index: 0;
+    }
+
+    .scroll-image img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    }
+
+    .scroll-image.left {
+      left: 40px;
+    }
+
+    .scroll-image.right {
+      right: 40px;
+    }
+
+    .scroll-image.visible {
+      opacity: 1;
+    }
+  }
 </style>
 </head>
 <body>
@@ -645,7 +686,90 @@
                 <h4>Developed by <span class="company-name">InsurgentAI</span></h4>
             </div>
         </div>
+        
+        <!-- Scroll Images (Desktop Only) -->
+        <div class="scroll-images">
+            <div class="scroll-image left" id="img1">
+                <img src="assets/img1.png" alt="Image 1">
+            </div>
+            <div class="scroll-image right" id="img2">
+                <img src="assets/img2.png" alt="Image 2">
+            </div>
+            <div class="scroll-image left" id="img3">
+                <img src="assets/img3.png" alt="Image 3">
+            </div>
+            <div class="scroll-image right" id="img4">
+                <img src="assets/img4.png" alt="Image 4">
+            </div>
+            <div class="scroll-image left" id="img5">
+                <img src="assets/img5.png" alt="Image 5">
+            </div>
+        </div>
     </div>
 </div>
+
+<script>
+window.addEventListener('load', function() {
+    const images = Array.from(document.querySelectorAll('.scroll-image'));
+    if (!images.length) return; // Exit if no images found
+    
+    const purposeSection = document.querySelector('.jumbotron.intro:first-of-type');
+    const contactSection = document.querySelector('.jumbotron.contact');
+    
+    if (!purposeSection || !contactSection) return; // Exit if required sections not found
+    
+    // Initially hide all images
+    images.forEach(img => img.classList.remove('visible'));
+    
+    function handleScroll() {
+        if (window.innerWidth < 576) return; // Only run on desktop
+        
+        const windowHeight = window.innerHeight;
+        const purposeRect = purposeSection.getBoundingClientRect();
+        const contactRect = contactSection.getBoundingClientRect();
+        
+        // Hide all images if outside the valid scroll range
+        if (purposeRect.top > windowHeight * 0.75 || contactRect.top <= windowHeight * 0.75) {
+            images.forEach(img => img.classList.remove('visible'));
+            return;
+        }
+        
+        // Get all sections
+        const sections = Array.from(document.querySelectorAll('.jumbotron.intro'));
+        
+        // Find which section is currently most visible in the viewport
+        let mostVisibleSection = null;
+        let maxVisibility = 0.5; // Minimum threshold for visibility
+        
+        sections.forEach((section, index) => {
+            const rect = section.getBoundingClientRect();
+            // Consider a section most visible when its heading is in the upper third of the viewport
+            const viewportThreshold = windowHeight * 0.33;
+            const distanceFromIdeal = Math.abs(rect.top - viewportThreshold);
+            const visibility = Math.max(0, 1 - (distanceFromIdeal / viewportThreshold));
+            
+            if (visibility > maxVisibility) {
+                maxVisibility = visibility;
+                mostVisibleSection = index;
+            }
+        });
+        
+        // Show/hide images based on the most visible section
+        images.forEach((img, index) => {
+            if (index === mostVisibleSection) {
+                img.classList.add('visible');
+            } else {
+                img.classList.remove('visible');
+            }
+        });
+    }
+    
+    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('resize', handleScroll);
+    
+    // Initial check
+    handleScroll();
+});
+</script>
 </body>
 </html>
