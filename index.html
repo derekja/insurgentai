@@ -21,6 +21,7 @@
     font-weight: 400;
     font-size: 16px;
     color: rgb(80,80,80);
+    background: rgb(0, 0, 0);
   }
   .container {
     background: transparent;
@@ -79,21 +80,63 @@
   }
   .bg-image {
     color:rgb(240,235,225);
-    background-repeat: no-repeat;
-    background-size:cover;
-    background-attachment: fixed;
   }
-  .splash-image {
-    background: linear-gradient(to bottom, rgba(120, 130, 140, 0.0), rgba(17, 17, 17, 0.8)),
-    url('./assets/hand_world_desat.png') no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+
+  .howwework-container {
+    display: flex;
+    justify-content: center;
+    margin: 5rem 0;
   }
+
+  @media (max-width: 575px) {
+    .howwework-container {
+      margin: 2.5rem 0;
+    }
+  }
+
+  .howwework {
+    width: 85%;
+    max-width: 800px;
+    background: none;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+  }
+
+  .strapline {
+    text-align: center;
+    padding: 120px 20px 50px;
+    color: rgb(240, 235, 225);
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .strapline::before,
+  .strapline::after {
+    content: '';
+    display: block;
+    height: 5px;
+    background: rgb(240, 235, 225);
+    margin: 35px auto;
+    width: 70%;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.4), 0 0 30px rgba(255, 255, 255, 0.2);
+  }
+
+  .strapline h1 {
+    font-family: 'Sunflower', sans-serif;
+    font-size: 56px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    margin: 0;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5), 0 0 30px rgba(0, 0, 0, 0.2);
+    padding: 30px 0;
+  }
+
   .splash-image>.container{
     height: 80vh;
-    padding-top: 80px;
+    padding-top: 20px;
   }
   .title {
     padding: 1rem;
@@ -107,11 +150,14 @@
   .jumbotron {
     background:rgba(19, 19, 19, 0.9);
     font-size:1.1rem;
-    margin:2rem auto;
+    margin:6rem auto;
     max-width:800px;
-    padding:1rem 2rem;
+    padding:2rem 2.5rem;
     color:rgb(250, 248, 248);
+    position: relative;
+    z-index: 1;
   }
+
   .contact {
     padding: 2rem;
   }
@@ -210,6 +256,12 @@
     .logo-banner {
       display: flex;
     }
+
+    .howwework {
+      width: 90%;
+      margin: 30px auto;
+      align-items: center;
+    }
   }
 
   /* Mobile-first styles */
@@ -231,9 +283,27 @@
       color: rgb(240, 235, 225);
     }
 
+    .strapline {
+      padding: 80px 15px 30px;
+    }
+
+    .strapline::before,
+    .strapline::after {
+      width: 90%;
+      height: 4px;
+      margin: 25px auto;
+      box-shadow: 0 0 12px rgba(255, 255, 255, 0.4), 0 0 24px rgba(255, 255, 255, 0.2);
+    }
+
+    .strapline h1 {
+      font-size: 42px;
+      line-height: 1.2;
+      padding: 20px 0;
+    }
+
     .splash-image > .container {
       height: auto;
-      padding-top: 70px;
+      padding-top: 20px;
       padding-bottom: 20px;
     }
 
@@ -241,34 +311,6 @@
       font-size: 24px;
       line-height: 1.4;
       margin-bottom: 0.5rem;
-    }
-
-    .bg-image {
-      background-attachment: scroll;
-    }
-
-    .splash-image {
-      background: linear-gradient(to bottom, rgba(120, 130, 140, 0.2), rgba(17, 17, 17, 0.9)),
-      url('./assets/hand_world_desat.png') no-repeat center center;
-      background-size: cover;
-    }
-
-    .jumbotron {
-      margin: 1rem;
-      padding: 1.5rem;
-    }
-
-    .jumbotron h4 {
-      margin-top: 1.5rem;
-      margin-bottom: 1rem;
-      font-size: 28px;
-      font-weight: 600;
-    }
-
-    .jumbotron p {
-      font-size: 15px;
-      line-height: 1.6;
-      margin-bottom: 1.2rem;
     }
 
     .logo-banner {
@@ -373,7 +415,6 @@
         max-width:100px;
     }
   }
-
 </style>
 </head>
 <body>
@@ -386,40 +427,40 @@
         <img src="assets/iai.png" alt="InsurgentAI Logo" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
         <span>InsurgentAI</span>
     </div>
+    <div class="strapline">
+      <h1>Decision Advantage.</h1>
+    </div>
+
     <div class="container">
       <div class="title text-center bg-body-tertiary rounded-3">
-        <h3 class="tagline">We empower those who protect us with the latest in bespoke AI-driven technologies. High speed and low drag, our agile and innovative teams are your tactical advantage. We are <span class="company-name">InsurgentAI</span>.</h3>
+        <h3 class="tagline">We empower those who protect us with the latest in bespoke AI-driven technologies. High speed and low drag, our agile and innovative team is your tactical advantage. We are <span class="company-name">InsurgentAI</span>.</h3>
       </div> 
     </div>
     <div>
         <div class="jumbotron intro">
             <h4>Our Purpose</h4>
-            <p><strong>We believe in breaking down the barriers to mission success.</strong></p>
-            <p>Insurgent AI is the ally of those who defend us. We know our people have the knowledge and skills to keep us safe, but legacy structures struggle to keep pace with relentless change. Organisations, units, and teams of any ilk know their mission, but too often lack the time or resource to onboard the right technology. Our answer? The data you own, transformed with the power of AI, for decision advantage. Our rally call is to deliver what works, with what you've got, for mission success. Now.</p>
+            <p><strong>We are disruptors, driven to overturn ineffective technology across Defence.</strong></p>
+            <p>We create high-value operational technology for Defence and Intelligence. The data you own, transformed with the power of AI. Our rally call is to deliver what works, with what you've got now. We are on the side of the practitioner - our sole focus, to break down the barriers to what slows you down.</p>
         </div>
         <div class="jumbotron intro">
             <h4>Our Origins</h4>
-            <p><strong>We exist to disrupt old models of support to Defence and Intelligence.</strong></p>
-            <p>For too long, Defence has been led by monolithic providers and broken procurement. Equipment and systems ordered for the right reasons, but which fail to deliver for the practitioner on the frontline. None more so than technology - unproven, exorbitant, and late - redundant by the time it arrives. Platforms made to solve someone else's problem, not fine-tuned to your unique needs. We develop solutions that drive operational impact as you see it.</p>
+            <p><strong>We are here to empower the person on the frontline.</strong></p>
+            <p>Forged between AI experts and Intelligence practitioners, we've lived the struggles of inadequate procurement and development. Systems ordered for the right reasons, which fail to deliver on the frontline. What lies between the operator and mission success is rarely a need for the exquisite, but being able to exploit what is currently available.</p>
         </div>
         <div class="jumbotron intro">
             <h4>Our Technology</h4>
-            <p><strong>We build AI that revolutionises your systems, not replace them.</strong></p>
-            <p>Our technology is engineered for impact, rapidly deploying open, scalable, solutions which seamlessly integrate with your current systems. We build on open architectures, using the latest approaches in AI including semantic graph knowledge bases to derive insight from your data and empower your users. Natural language solutions enable semantic search, fact decomposition consistency checking, and language standardisation tools. Enable your diverse workforce to form a cohesive body of actionable knowledge.</p>
-        </div>
-        <div class="jumbotron intro">
-            <h4>Our Ethos</h4>
-            <p><strong>We formed to help our people deliver on operations, behind the desk or in the field.</strong></p>
-            <p>Born from deep expertise in AI development across sectors, we joined with Intelligence practitioners marked by operational experience. The common ground - what lies between the operator and mission success is rarely a need for expensive, exquisite systems or kit, but by being able to exploit what is currently available to you. We integrate technical expertise with practitioner insight to redirect existing systems and resources to drive effect on the ground - powered by the latest in AI innovation.</p>
+            <p><strong>We build AI to revolutionise your systems, not replace them.</strong></p>
+            <p>Our technology is engineered for impact, rapidly deploying scalable solutions which seamlessly integrate with your current systems. We build on open architectures, using the latest approaches in AI, including semantic graph knowledge bases to derive insight from your data and empower your users. Natural language solutions enable semantic search, fact decomposition consistency checking, and language standardisation tools.</p>
         </div>
         <div class="jumbotron intro">
             <h4>Our Commitment</h4>
-            <p><strong>We form partnerships to solve the problems as defined by you.</strong></p>
-            <p>We know that to deliver today, tomorrow, and the next day, is only done through partnerships based on trust. That's why we trade in commitment, not transactions. For us, Phase 0 is decisive, embedding with your team to assess every obstacle - and opportunity - before identifying the requirement. As your needs change, we offer a partner capable of deploying new and bespoke tools to your team in time to make the start-line. By thinking long-term, we deploy only what's right for you, not what used to be right for somebody else.</p>
+            <p><strong>We form deep partnerships to solve problems, founded on trust.</strong></p>
+            <p>We trade in commitment, not transactions. For us, Phase 0 is decisive, embedding with your team to assess every obstacle - and opportunity - before working with you to identify requirements. As your needs change, we are a partner who evolves our support in lockstep with you. We deploy only what's right for you, not what used to be right for somebody else.</p>
         </div>
         <div class="jumbotron intro">
             <h4>Our Team</h4>
-            <p>We are AI experts, leaders, and practitioners from across Allied nations. Centred in Canada, we operate globally, focussing on core partners in the UK, US, Australia, and New Zealand. We are individuals from diverse backgrounds, who have come to build a team, united by our common task - giving the advantage to those who keep us safe.</p>
+            <p><strong>We are a Canadian-based group of AI experts, public safety leaders, and practitioners.</strong></p>
+            <p>A diverse team with cross-cutting expertise, beyond technology and Defence sectors. We approach your needs with a deep understanding of the demands on a decision-maker in public service.</p>
         </div>
         <div class="jumbotron contact">
             <h4>Want to learn more or get in touch?</h4><h4>Send us your email and you'll hear back from us.</h4>
